@@ -1,4 +1,4 @@
-module github.com/lcvvvv/gonmap
+module github.com/hot5auce/gonmap_customized
 
 go 1.16
 

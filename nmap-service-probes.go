@@ -2222,6 +2222,9 @@ match mysql m|^.\0\0\0...'Host' '[-.\w]+' n\xe3o tem permiss\xe3o para se conect
 match mysql m|^.\0\0\0\x0a([\w._-]+)\0............\0\x5f\xd3\x2d\x02\0\0\0\0\0\0\0\0\0\0\0\0\0\0............\0$|s p/Drizzle/ v/$1/
 match mysql m|^.\0\0\0\x0a([\w._-]+)\0............\0\x5f\xd1\x2d\x02\0\0\0\0\0\0\0\0\0\0\0\0\0\0............\0$|s p/Drizzle/ v/$1/
 
+#TiDB
+match tidb m|^.*TiDB-v([0-9]+(\.[0-9]+)+).*$|s p/TiDB/ v/$1/ cpe:/a:tidb:tidb:$1/
+
 #MariaDB
 match mysql m|^.\0\0\0\x0a(5\.[-_~.+:\w]+MariaDB-[-_~.+:\w]+~bionic)\0|s p/MySQL/ v/$1/ cpe:/a:mariadb:mariadb:$1/ o/Linux/ cpe:/o:canonical:ubuntu_linux:18.04/
 match mysql m|^.\0\0\0\x0a(5\.[-_~.+:\w]+MariaDB-[-_~.+:\w]+)\0|s p/MySQL/ v/$1/ cpe:/a:mariadb:mariadb:$1/
